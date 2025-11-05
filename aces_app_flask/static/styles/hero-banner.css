@@ -1,0 +1,168 @@
+/* CSS code for the Hero Banner */
+
+header {
+  background-color: rgb(54, 40, 99);
+  height: 34rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blue-gradient {
+  background-color: rgba(39, 165, 220, 0.5);
+  height: 31rem;
+  width: 31rem;
+  border-radius: 16rem;
+  position: absolute;
+  top: -100px;
+  left: -200px;
+  filter: blur(5rem);
+}
+
+.green-gradient {
+  background-color: rgba(25, 182, 135, 0.5);
+  height: 31rem;
+  width: 31rem;
+  border-radius: 16rem;
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  filter: blur(5rem);
+}
+
+.short-web-app-name,
+.full-web-app-name,
+.about-us,
+.checker-shortcut-button {
+  z-index: 1;
+}
+
+.short-web-app-name {
+  font-family: Acme;
+  font-size: 16rem;
+  color: rgb(213, 221, 226);
+}
+
+.full-web-app-name {
+  font-family: Acme;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  color: rgb(213, 221, 226);
+  margin-top: -3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-us {
+  font-family: Open Sans;
+  font-size: 1.4rem;
+  color: rgb(213, 221, 226);
+  width: 46rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.checker-shortcut-button {
+  font-family: Open Sans;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.6rem 1.6rem;
+  border: 0.2rem solid transparent;
+  background: linear-gradient(rgb(30, 30, 30), rgb(30, 30, 30)) padding-box,
+              repeating-conic-gradient(from var(--a), rgb(245, 221, 0), rgb(143, 0, 95), rgb(245, 221, 0)) border-box;
+  border-radius: 2rem;
+  animation: border-animate 1.5s linear infinite;
+  cursor: pointer;
+}
+
+/* Animation for the moving gradient border effect in the checker shortcut button */
+@property --a {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+
+/* Responsive design */
+@media (width <= 938px) {
+  header {
+    height: 28rem;
+  }
+
+  .blue-gradient {
+    height: 27rem;
+    width: 27rem;
+  }
+  
+  .green-gradient {
+    height: 27rem;
+    width: 27rem;
+  }
+
+  .short-web-app-name {
+    font-size: 12rem;
+  }
+
+  .full-web-app-name {
+    font-size: 1.8rem;
+    margin-top: -2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-us {
+    font-size: 1.2rem;
+    width: 38rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .checker-shortcut-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (width <= 630px) {
+  header {
+    height: 21rem;
+  }
+
+  .blue-gradient {
+    height: 22rem;
+    width: 22rem;
+  }
+  
+  .green-gradient {
+    height: 22rem;
+    width: 22rem;
+  }
+  
+  .short-web-app-name {
+    font-size: 9rem;
+  }
+
+  .full-web-app-name {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .about-us {
+    font-size: 0.9rem;
+    width: 28rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .checker-shortcut-button {
+    font-size: 0.8rem;
+  }
+}

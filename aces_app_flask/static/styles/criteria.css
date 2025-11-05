@@ -1,0 +1,156 @@
+/* CSS code for the Criteria section */
+
+#criteria {
+  padding: 2rem 8rem;
+  position: relative;
+}
+
+.criteria-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.criterion-container {
+  width: 50%;
+}
+
+.criterion-image-container {
+  display: flex;
+  justify-content: center;
+  height: 19rem;
+  padding-right: 1.56rem;
+}
+
+.criterion-image-one {
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.criterion-image-two {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.criterion-name {
+  font-family: Open Sans;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.criterion-description {
+  font-family: Open Sans;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.gray-background-1, .gray-background-2 {
+  background-color: rgba(45, 84, 110, 0.2);
+  height: 7.5rem;
+  position: absolute;
+  top: 200px;
+  left: 125px;
+  right: 125px;
+  z-index: -1;
+}
+
+.gray-background-2 {
+  display: none;
+}
+
+/* Responsive design */
+@media (width <= 938px) {
+  #criteria {
+    padding: 1rem 4rem;
+  }
+  
+  .criteria-info {
+    flex-wrap: wrap;
+  }
+
+  .criterion-container {
+    width: 100%;
+  }
+  
+  .criterion-image-container {
+    height: 17rem;
+  }
+  
+  .criterion-image-one {
+    width: 14rem;
+    height: 14rem;
+  }
+  
+  .criterion-image-two {
+    width: 16rem;
+    height: 16rem;
+  }
+  
+  .criterion-name {
+    font-size: 1.3rem;
+    margin-top: -0.7rem;
+  }
+  
+  .criterion-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .gray-background-1, .gray-background-2 {
+    height: 7rem;
+    top: 175px;
+    left: 80px;
+    right: 80px;
+  }
+
+  .gray-background-2 {
+    display: block;
+    top: 555px;
+  }
+}
+
+@media (width <= 630px) {
+  #criteria {
+    padding: 0.5rem 2rem;
+  }
+  
+  .criterion-image-container {
+    height: 13rem;
+  }
+  
+  .criterion-image-one {
+    width: 11rem;
+    height: 11rem;
+  }
+  
+  .criterion-image-two {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .criterion-name {
+    font-size: 1rem;
+    margin-top: -0.5rem;
+  }
+
+  .criterion-description {
+    font-size: 0.8rem;  
+    margin-bottom: 0.6rem;
+  }
+
+  .gray-background-1, .gray-background-2 {
+    height: 5rem;
+    top: 140px;
+    left: 30px;
+    right: 30px;
+  }
+
+  .gray-background-2 {
+    top: 455px;
+  }
+}

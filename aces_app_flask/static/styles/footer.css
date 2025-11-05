@@ -1,0 +1,203 @@
+/* CSS code for the Footer */
+
+footer {
+  background-color: rgb(54, 39, 98);
+  padding: 2rem 8rem;
+  color: rgb(213, 221, 226);
+  display: flex;
+  align-items: top; 
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.contact-us-title, .feedback-form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.contact-info {
+  display: flex;
+  font-size: 1.3rem;
+  flex-direction: column;
+}
+
+.phone-number-container, .mail-info {
+  display: flex;
+  justify-items: center;
+  padding-top: 1.6rem;
+}
+
+.phone-icon-container, .mail-icon-container {
+  display: flex;
+  justify-items: center;
+  height: 3rem;
+}
+
+.contact-icon {
+  width: 1.9rem;
+  height: 2.25rem;
+}
+
+.mail-icon {
+  width: 2.4rem;
+  height: 1.75rem;
+}
+
+.pn-container {
+  padding-top: 0.3rem;
+  padding-left: 0.4rem;
+}
+
+.mail-address-container {
+  padding-top: 0.1rem;
+}
+
+.p-number, .mail-address {
+  display: flex;
+  color: rgb(213, 221, 226);
+  padding-left: 2.5rem;
+  font-size: 1.1rem;
+}
+
+#feedback-form {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.feedback-form-title {
+  margin-bottom: 0.6rem;
+}
+
+.feedback-box {
+  font-family: Open sans;
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0) 60%;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: rgb(213, 221, 226);
+  padding-left: 1rem;
+  padding-top: 1rem;
+  display: block;
+  width: 100%;
+  resize: none;
+  margin-bottom: 0.9rem;
+  overflow: auto;
+}
+
+.feedback-box::placeholder {
+  font-family: Open Sans;
+  font-size: 1.1rem;
+}
+
+.submit-button {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 6.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  color: rgb(213, 221, 226);
+  border: 0.15rem solid transparent;
+  background: linear-gradient(#362762,#362762) padding-box,
+              linear-gradient(to top, #4BBBA7, #60ABE4) border-box;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  color: black;
+  background: linear-gradient(to top, #4BBBA7, #60ABE4) border-box; 
+}
+
+.footer-bottom {
+  height: 10px;
+  background-image: linear-gradient(to right, #60ABE4, #4BBBA7 );
+}
+
+/* Responsive design */
+@media (width <= 938px) {
+  footer {
+    padding: 1.5rem 4rem;
+    gap: 3rem;
+  }
+  
+  .contact-us-title, .feedback-form-title {
+    font-size: 1.3rem;
+    margin-top: 0.65rem;
+  }
+
+  .phone-icon-container, .mail-icon-container {
+    height: 2rem;
+  }
+  
+  .contact-icon {
+    width: 1.4rem;
+    height: 1.75rem;
+  }
+  
+  .mail-icon {
+    width: 1.9rem;
+    height: 1.25rem;
+  }
+
+  .p-number, .mail-address {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .feedback-box::placeholder {
+    font-size: 0.9rem;
+  }
+  
+  .submit-button {
+    font-size: 0.9rem;
+    width: 5.5rem;
+    height: 2.1rem;
+  } 
+}
+
+@media (width <= 630px) {
+  footer {
+    padding: 1.25rem 2rem;
+  }
+
+  .contact-us-title, .feedback-form-title {
+    font-size: 1rem;
+  }
+
+  .phone-icon-container, .mail-icon-container {
+    height: 1.5rem;
+  }
+  
+  .contact-icon {
+    width: 1.1rem;
+    height: 1.25rem;
+  }
+  
+  .mail-icon {
+    width: 1.4rem;
+    height: 0.75rem;
+  }
+
+  .p-number, .mail-address {
+    padding-left: 1.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .feedback-box {
+    font-size: 0.7rem;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+  }
+  
+  .feedback-box::placeholder {
+    font-size: 0.7rem;
+  }
+  
+  .submit-button {
+    font-size: 0.7rem;
+    width: 4.3rem;
+    height: 1.7rem;
+  } 
+}

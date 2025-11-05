@@ -1,0 +1,33 @@
+Complexity Level,Feature Name,Mean,Median,Max,Min
+simple,Frame Rate (fps),26.3204,29.97003,30.0,10.0
+hard,Frame Rate (fps),29.78602,30.0,30.0,25.0
+simple,Scene Transition Rate (Per Min),1.36149,0.26367,10.09551,0.0
+hard,Scene Transition Rate (Per Min),0.5559,0.39241,2.56345,0.0
+simple,Average Scene Duration (in Mins),2.61202,2.00033,9.61627,0.09675
+hard,Average Scene Duration (in Mins),2.41355,1.80778,8.44611,0.37237
+simple,Average Motion Intensity,1.70323,1.57052,8.56948,0.01448
+hard,Average Motion Intensity,0.71676,0.64762,3.77642,0.22298
+simple,Average Texture Contrast,3934.71321,2634.14408,17731.70404,1149.64255
+hard,Average Texture Contrast,4420.29057,3673.05187,8367.47586,1727.62725
+simple,Average Texture Homogeneity,0.47653,0.53569,0.8494,0.03503
+hard,Average Texture Homogeneity,0.32347,0.21102,0.72636,0.07098
+simple,Dominant Color Standard Deviation (R),43.80777,40.34899,94.72054,0.62589
+hard,Dominant Color Standard Deviation (R),28.52081,15.92192,101.42479,2.39935
+simple,Dominant Color Standard Deviation (G),38.58629,32.41515,85.22295,0.46918
+hard,Dominant Color Standard Deviation (G),28.22268,19.17476,99.64063,2.02901
+simple,Dominant Color Standard Deviation (B),38.03125,33.09074,83.52672,0.54712
+hard,Dominant Color Standard Deviation (B),26.56066,22.60434,99.84985,1.89274
+simple,Bit Rate (Mbps),0.25998,0.215,0.60016,0.12152
+hard,Bit Rate (Mbps),0.24929,0.25283,0.47022,0.15624
+simple,Compression Ratio,0.30105,0.27815,0.7234,0.07332
+hard,Compression Ratio,0.36993,0.36308,1.0,0.07235
+simple,Average PSNR (dB),36.12376,37.76134,70.37508,17.21785
+hard,Average PSNR (dB),53.45055,59.51886,80.75969,17.90026
+simple,Average SSIM,0.90279,0.9158,0.99827,0.45172
+hard,Average SSIM,0.96011,0.96411,0.99206,0.85178
+simple,Average Color Standard Deviation (R),29.47722,31.14181,65.2956,0.86648
+hard,Average Color Standard Deviation (R),11.41302,11.12648,30.50559,1.75682
+simple,Average Color Standard Deviation (G),25.58563,27.5248,67.13001,0.82069
+hard,Average Color Standard Deviation (G),11.40945,10.88896,29.56754,1.76448
+simple,Average Color Standard Deviation (B),26.20744,26.95339,75.68608,0.28447
+hard,Average Color Standard Deviation (B),13.0921,14.38256,31.50322,1.93679

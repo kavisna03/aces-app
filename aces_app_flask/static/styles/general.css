@@ -1,0 +1,55 @@
+/* General CSS code */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: Open Sans;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: Open Sans;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.section-divider {
+  background-color: rgba(45, 84, 110, 0.2);
+  position: absolute;
+  left: 125px;
+  right: 125px;
+  height: 10px;
+}
+
+/* Responsive design */
+@media (width <= 938px) {
+  .section-title {
+    font-size: 1.5rem;
+    margin-top: 0.93rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-divider {
+    left: 80px;
+    right: 80px;
+  }
+}
+
+@media (width <= 630px) {
+  .section-title {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .section-divider {
+    left: 30px;
+    right: 30px;
+  }
+}

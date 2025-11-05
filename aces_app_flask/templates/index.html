@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- This is the ACES website developed for the Senior Project titled 
+  'Automated Video Content Appropriateness Evaluator for Schools' -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ACES</title>
+    <!-- Link CSS files to this HTML file -->
+    <link href="{{ url_for('static', filename='styles/general.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/hero-banner.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/criteria.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/checker.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/footer.css') }}" rel="stylesheet">
+
+    <!-- Import Acme and Open Sans font-families from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- This is the Hero Banner -->
+    <header>
+      <div class="blue-gradient"></div>
+      <div class="green-gradient"></div>
+
+      <p class="short-web-app-name">
+        ACES
+      </p>
+      <p class="full-web-app-name">
+        Appropriate Content Evaluator for Schools
+      </p>
+
+      <p class="about-us">
+        A platform promoting efficient lesson planning for educators by 
+        automatically evaluating the suitability of videos for their students
+      </p>
+
+      <a href="#checker">
+        <button class="checker-shortcut-button">
+          Try Our Video Appropriateness Checker Now
+        </button>
+      </a>
+    </header>
+
+    <!-- This is the Criteria section -->
+    <section id="criteria">
+      <p class="section-title">
+        APPROPRIATENESS EVALUATION CRITERIA
+      </p>
+
+      <div class="criteria-info">
+        <div class="criterion-container">
+          <div class="criterion-image-container">
+            <img class="criterion-image-one" src="{{ url_for('static', filename='images/language-complexity.png') }}" alt="Language Complexity Image">
+          </div>
+          <p class="criterion-name">
+            Language Complexity
+          </p>
+          <p class="criterion-description">
+            Categorizes the complexity of the language used in the video in terms of grade-level categories 
+            (Kindergarten, Elementary School (Grades 1-5), Middle School (Grades 6-8), High School (Grades 9-12))
+          </p>
+        </div>
+
+        <div class="criterion-container">
+          <div class="criterion-image-container">
+            <img class="criterion-image-two" src="{{ url_for('static', filename='images/presentation-complexity.png') }}" alt="Presentation Complexity Image">
+          </div>
+          <p class="criterion-name">
+            Presentation Complexity
+          </p>
+          <p class="criterion-description">
+            Categorizes the complexity of the video presentation style into two categories (Simple, Hard)
+            based on the amount of text, graphics, and animations, and the organization of information
+          </p>
+        </div>
+      </div>
+
+      <div class="gray-background-1"></div>
+      <div class="gray-background-2"></div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- This is the Checker section -->
+    <section id="checker">
+      <p class="section-title">
+        VIDEO APPROPRIATENESS CHECKER
+      </p>
+
+      <!-- enctype="multipart/form-data" is an encoding type that allows users to upload files and send using POST method -->
+      <form id="checker-form" method="POST" action="/checker_form" enctype="multipart/form-data">
+        <div class="left-section">
+          <div class="select-criteria-title">
+            <p>Select Criteria</p>
+          </div>
+
+          <div class="left-section-grid">
+            <div class="criterion-checkbox-container">
+              <input name="language-complexity" id="criterion-1" type="checkbox" value="language">
+              <label for="criterion-1">
+                Language Complexity
+              </label>
+            </div>
+            <br>
+            <div class="criterion-checkbox-container">
+              <input name="presentation-complexity" id="criterion-2" type="checkbox" value="presentation">
+              <label for="criterion-2">
+                Presentation Complexity
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <div class="right-section-grid">
+            <p class="upload-title">Upload Video File</p>
+
+            <!-- accept="video/*" shows only video files in the file picker tool -->
+            <!-- But users can still upload other file types, hence futher validation is performed using JavaScript to avoid processing non-video files -->
+            <input class="video-file-input" name="video-file" type="file" accept="video/*">
+
+            <input class="evaluate-button" type="submit" value="Evaluate">
+          </div>
+        </div>
+      </form>
+
+      <div class="appr-result">
+        <div class="invisible-block"></div>
+
+        <div class="appr-result-container">
+          <p class="appr-result-title">Appropriateness Result</p>
+          <div class="appr-result-bar">
+            {% if language_prediction_text %}
+              {{ language_prediction_text }}<br><br>
+            {% endif %}
+
+            {% if presentation_prediction_text %}
+              {{ presentation_prediction_text }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This is the footer -->
+    <footer>
+      <div class="contact-info">
+        <div class="contact-us-title">
+          <p>CONTACT US</p>
+        </div>
+
+        <div class="phone-number-container">
+          <div class="phone-icon-container">
+            <img class="contact-icon" src="{{ url_for('static', filename='icons/contact-icon.png') }}" alt="Phone Icon">
+          </div>
+          <div class="pn-container">
+            <p class="p-number">+971 50 123 4567</p>
+          </div>
+        </div>
+
+        <div class="mail-info">
+          <div class="mail-icon-container"> 
+            <img class="mail-icon" src="{{ url_for('static', filename='icons/mail-icon.png') }}" alt="Mail Icon">
+          </div>
+          <div class="mail-address-container">
+            <a class="mail-address" href="mailto:teamKAS@gmail.com">teamKAS@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <form id="feedback-form" method="POST" action="/">
+        <p class="feedback-form-title">
+          YOUR FEEDBACK MATTERS
+        </p>
+        <textarea class="feedback-box" name="feedback" rows="6" cols="45" placeholder="Write here"></textarea>
+        <input class="submit-button" type="submit" value="Submit">
+      </form>
+    </footer>
+
+    <div class="footer-bottom"></div>
+
+    <!-- Link JavaScript files to this HTML file -->
+    <!-- This is added at the end within the body tag to ensure the script is executed only after the HTML document has loaded -->
+    <script src="{{ url_for('static', filename='scripts/checker.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/footer.js') }}"></script>
+  </body>
+</html>
